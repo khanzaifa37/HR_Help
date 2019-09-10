@@ -1,0 +1,22 @@
+#page-top{
+   /*text-align: center;*/
+    padding: 5%;
+}
+
+.container{
+    background: rgba(243, 241, 239, 1);
+    border: 2px solid;
+}
+
+a #changeColor
+{
+	color:white;
+}
+
+a
+{
+	color:white;
+}
+.next{
+    text-align: center;
+}

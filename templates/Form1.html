@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png" />
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <title>HR HELPER</title>
+
+        <link rel="stylesheet" href="/static/css/form.css">
+</head>
+
+<body id="page-top">
+    <form class="my-5 container" id="form1" action = "{{ url_for('predict') }}" method = "POST">
+        <div class="row">
+            <div class="col">
+                Name:<input type="text" name="name" class="form-control col-md-8 mb-6" placeholder="Name">
+            </div>
+            <div class="col ">
+                Age:<input type="number" name="age" class="form-control col-md-8 mb-6" placeholder="Age">
+            </div>
+        </div>
+        <br>
+        <div class="col-md-4 mb-3">
+            Gender: <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="male" checked>
+                <label class="form-check-label" for="gender">
+                    Male
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="female">
+                <label class="form-check-label" for="gender">
+                    Female
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="trans">
+                <label class="form-check-label" for="gender">
+                    Other
+                </label>
+            </div>
+        </div>
+        
+        <br>
+        <div class="col-md-4 mb-3">
+            Family history of mental health condition?<br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="History" value="Yes" checked>
+                <label class="form-check-label" for="History">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="History" value="No">
+                <label class="form-check-label" for="History">
+                    No
+                </label>
+            </div>
+        </div>
+        <div class="col-md-8 mb-6">
+            Does mental health condition interfere with your work?<br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="intf" value="Often" checked>
+                <label class="form-check-label" for="intf">
+                    Often
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="intf" value="Never">
+                <label class="form-check-label" for="intf">
+                    Never
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="intf" value="Rarely">
+                <label class="form-check-label" for="intf">
+                    Rarely
+                </label>
+            </div>
+             <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="intf" value="Sometimes">
+                <label class="form-check-label" for="intf">
+                    Sometimes
+                </label>
+            </div>
+        </div>
+                <br>
+        <div class="col-md-8 mb-6">
+            Do you know the options for mental health care your employer provides? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="care_options" value="Yes" checked>
+                <label class="form-check-label" for="care_options">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="care_options" value="No">
+                <label class="form-check-label" for="care_options">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="care_options" value="Not sure">
+                <label class="form-check-label" for="care_options">
+                   Not Sure
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12 mb-6">
+            Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment
+            resources? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="anonymity" value="Yes" checked>
+                <label class="form-check-label" for="anonymity">
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="anonymity" value="No">
+                <label class="form-check-label" for="anonymity">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="anonymity" value="Don't know">
+                <label class="form-check-label" for="anonymity">
+                    Don't Know
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-8 mb-6">
+            How easy is it for you to take medical leave for a mental health condition? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="leave" value="Somewhat easy" checked>
+                <label class="form-check-label" for="leave">
+                    Somewhat Easy
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="leave" value="Somewhat difficult" checked>
+                <label class="form-check-label" for="leave">
+                    Somewhat Difficult
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="leave" value="Don't know">
+                <label class="form-check-label" for="leave">
+                    Don't know
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="leave" value="Very easy">
+                <label class="form-check-label" for="leave">
+                    Very easy
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="leave" value="Very difficult">
+                <label class="form-check-label" for="leave">
+                    Very difficult
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12">
+            Does your employer provide resources to learn more about mental health issues and how to seek help?<br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="seek_help" value="Yes" checked>
+                <label class="form-check-label" for="seek_help">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="seek_help" value="No">
+                <label class="form-check-label" for="seek_help">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="seek_help" value="Don't know">
+                <label class="form-check-label" for="seek_help">
+                    Don't Know
+                </label>
+            </div>
+        </div>
+        <br>
+        <small>Click next to continue</small>
+        <div class="form-group row next">
+            <div class="col-sm-10">
+                <input type="submit" class="btn btn-success">Next</button>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

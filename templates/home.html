@@ -1,16 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-   <form action = "{{ url_for('predict') }}" method = "POST">
-		  <h3>Enter Tweet</h3>
-      <input type = "text" name = "tweet"/>
-      <br>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png"/>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<title>HR HELPER</title>
 
-			<br><input type = "submit" value = "submit" /><br>
-		</form>
-  </body>
+  
+        <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body id="page-top">
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#" >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Stats</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Applications</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!-- Header -->
+  <header class="masthead">
+        <div class=" my-5 container">
+          <div class="intro-text">
+            <div class="intro-heading text-uppercase centre">HR HELPER</div>
+          </div>
+        </div>
+      </header>
+
+<!--Statistics-->
+<div class=" my-5 container">
+    <div class="intro-text">
+        <div class="intro-heading text-uppercase centre">Statistics</div>
+    </div>
+</div>
+
+<div class="container buton">
+    <a href="/form1">
+        <button class="btn btn-primary">
+            Check Leave Eligibility
+        </button>
+    </a>
+</div>
+    
+<!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container" >
+                <div class="col-md-4">
+                        <ul class="list-inline social-buttons">
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fab fa-linkedin-in"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fab fa-facebook-f"></i>
+                            </a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="#">
+                              <i class="fab fa-instagram"></i> 
+                            </a>
+                          </li>
+                          &copy;<b>Copyright</b>
+                        </ul>
+                      </div> 
+        </div>
+    </footer>
+
+  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
 </html>
